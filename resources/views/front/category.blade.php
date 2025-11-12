@@ -8,8 +8,6 @@
 	<nav id="Category"
      class="max-w-[1130px] mx-auto flex justify-center items-center gap-4 flex-nowrap mt-4 mb-0 overflow-visible">
 
-
-
         @foreach ($categories->take(5) as $category)
         <a href="{{ route('front.category', $category->slug) }}" 
            class="rounded-full px-[18px] py-[10px] flex items-center gap-[8px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#68a63e] shrink">
@@ -48,51 +46,43 @@
     </nav>
 
     <!-- MODAL KATEGORI -->
-    <div x-show="showModal" 
-         x-transition:enter="ease-out duration-300"
-         x-transition:enter-start="opacity-0"
-         x-transition:enter-end="opacity-100"
-         x-transition:leave="ease-in duration-200"
-         x-transition:leave-start="opacity-100"
-         x-transition:leave-end="opacity-0"
-         @click.outside="showModal = false"
-         style="display: none;"
-         class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
-
-        <div x-show="showModal"
-             x-transition:enter="ease-out duration-300"
-             x-transition:enter-start="opacity-0 scale-95"
-             x-transition:enter-end="opacity-100 scale-100"
-             x-transition:leave="ease-in duration-200"
-             x-transition:leave-start="opacity-100 scale-100"
-             x-transition:leave-end="opacity-0 scale-95"
-             class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-6">
-
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-bold">Pilih Kategori</h3>
-                <button @click="showModal = false" 
-                        class="p-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" 
-                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-h-[60vh] overflow-y-auto p-1">
-                @foreach ($categories as $category)
-                <a href="{{ route('front.category', $category->slug) }}" 
-                   class="rounded-xl p-4 flex items-center gap-3 font-semibold transition-all duration-300 border border-transparent hover:border-[#EEF0F7] hover:bg-gray-50">
+    <div x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200"
+    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+    @click.outside="showModal = false"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50"
+    style="display: none;">
+    <div x-show="showModal" x-transition:enter="ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-95"
+        class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-6 border border-gray-200">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Pilih Kategori</h3>
+            <button @click="showModal = false"
+                class="p-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-h-[60vh] overflow-y-auto p-1">
+            @foreach ($categories as $category)
+                
+                <a href="{{ route('front.category', $category->slug) }}"
+                    class="rounded-xl p-4 flex items-center gap-3 font-semibold text-gray-700 transition-all duration-300 border border-transparent hover:border-[#407a1b] hover:bg-gray-50">
                     <div class="w-8 h-8 shrink-0">
-                        <img src="{{ Storage::url($category->icon) }}" alt="icon" class="w-full h-full object-contain" />
+                        <img src="{{ Storage::url($category->icon) }}" alt="icon"
+                            class="w-full h-full object-contain" />
                     </div>
                     <span>{{ $category->name }}</span>
                 </a>
-                @endforeach
-            </div>
+            @endforeach
         </div>
     </div>
+</div>
 
 </div>
 

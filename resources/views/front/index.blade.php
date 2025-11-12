@@ -5,39 +5,51 @@
     <div class="font-[Poppins] pb-[72px] bg-white-50">
         <x-navbar />
 
-	 <div x-data="{ showModal: false }">
-            <nav id="Category"
-                class="max-w-[1130px] mx-auto flex justify-center items-center gap-4 flex-nowrap mt-10 mb-0 overflow-x-auto custom-scrollbar px-4">
-                @foreach ($categories->take(5) as $category)
-                    {{-- Tombol diubah ke bg-white dan hover:ring Hijau Highlight --}}
-                    <a href="{{ route('front.category', $category->slug) }}"
-                        class="rounded-full px-[18px] py-[10px] flex items-center gap-[8px] font-semibold transition-all duration-300 bg-white border border-gray-200 hover:ring-2 hover:ring-[#a0d97b] text-gray-700 shrink-0">
-                        <div class="w-5 h-5 shrink-0">
-                            <img src="{{ Storage::url($category->icon) }}" alt="icon"
-                                class="w-full h-full object-contain" />
-                        </div>
-                        <span class="truncate">{{ $category->name }}</span>
-                    </a>
-                @endforeach
+	<div x-data="{ showModal: false }">
+	<nav id="Category"
+     class="max-w-[1130px] mx-auto flex justify-center items-center gap-4 flex-nowrap mt-4 mb-0 overflow-visible">
 
-                @if ($categories->count() > 5)
-                    <button @click="showModal = true"
-                        class="rounded-full px-[18px] py-[10px] flex items-center gap-[8px] font-semibold transition-all duration-300 bg-white border border-gray-200 hover:ring-2 hover:ring-[#a0d97b] text-gray-700 shrink-0">
-                        
-                        <div class="w-5 h-5 shrink-0 text-[#68a63e]"> 
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <span>Semua Kategori</span>
-                    </button>
-                @endif
-            </nav>
 
-            <div x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0"
+
+        @foreach ($categories->take(5) as $category)
+        <a href="{{ route('front.category', $category->slug) }}" 
+           class="rounded-full px-[18px] py-[10px] flex items-center gap-[8px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#68a63e] shrink">
+            <div class="w-5 h-5 shrink-0">
+                <img src="{{ Storage::url($category->icon) }}" alt="icon" class="w-full h-full object-contain" />
+            </div>
+            <span class="truncate">{{ $category->name }}</span>
+        </a>
+        @endforeach
+
+        @if ($categories->count() > 5)
+        <button @click="showModal = true" 
+                class="rounded-full px-[18px] py-[10px] flex items-center gap-[8px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#68a63e] shrink">
+            <div class="w-5 h-5 shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M4 6a2 2 0 012-2h2a2 2 0 
+                          012 2v2a2 2 0 01-2 2H6a2 2 0 
+                          01-2-2V6zM14 6a2 2 0 
+                          012-2h2a2 2 0 012 2v2a2 2 0 
+                          01-2 2h-2a2 2 0 
+                          01-2-2V6zM4 16a2 2 0 
+                          012-2h2a2 2 0 012 2v2a2 2 0 
+                          01-2 2H6a2 2 0 
+                          01-2-2v-2zM14 16a2 2 0 
+                          012-2h2a2 2 0 012 2v2a2 2 0 
+                          01-2 2h-2a2 2 0 
+                          01-2-2v-2z"></path>
+                </svg>
+            </div>
+            <span>Semua Kategori</span>
+        </button>
+        @endif
+
+    </nav>
+
+    <!-- MODAL KATEGORI -->
+    <div x-show="showModal" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0"
     x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200"
     x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
     @click.outside="showModal = false"
@@ -74,10 +86,12 @@
         </div>
     </div>
 </div>
+
+</div>
+
         <section id="Hero-Grid" class="max-w-[1130px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 px-4">
             
             <div class="lg:col-span-2">
-                {{-- Border dikembalikan ke light mode --}}
                 <div class="w-full main-carousel relative rounded-2xl overflow-hidden shadow-sm border border-gray-100">
                     @forelse ($featured_articles as $article)
                         <div class="featured-news-card relative w-full h-[550px] flex shrink-0 overflow-hidden">
@@ -110,8 +124,7 @@
                     @if ($featured_articles->count() > 0)
                         <div
                             class="prevNextButtons absolute z-30 w-full left-1/2 -translate-x-1/2 bottom-10 px-4 flex justify-end pointer-events-none">
-                            <div class="flex items-center gap-4 mb-[60px] pointer-events-auto">
-                                {{-- Tombol carousel bisa tetap oranye sebagai aksen unik, atau diganti ke hijau --}}
+                            <div class="flex items-center gap-4 mb-[10px] pointer-events-auto">
                                 <button
                                     class="button--previous appearance-none w-[38px] h-[38px] flex items-center justify-center rounded-full shrink-0 ring-1 ring-white hover:ring-2 hover:ring-[#a0d97b] transition-all duration-300">
                                     <img src="{{ asset('assets/images/icons/arrow.svg') }}" alt="arrow" />
@@ -126,12 +139,13 @@
                 </div>
             </div>
 
+            <!-- Bagian Kanan -->
             <div class="lg:col-span-1">
                 {{-- Card dikembalikan ke bg-white --}}
                 <div class="bg-white p-6 rounded-2xl border border-gray-200 flex flex-col gap-4 h-full">
                     <h3 class="font-bold text-xl text-gray-900">Trending Now</h3>
                     <div class="flex flex-col gap-5">
-                        @forelse ($articles->take(4) as $trendingArticle)
+                        @forelse ($articles->take(10) as $trendingArticle)
                             <a href="{{ route('front.details', $trendingArticle->slug) }}" class="flex items-center gap-4 group">
                                 <div class="w-[100px] h-[80px] rounded-lg overflow-hidden shrink-0">
                                     <img src="{{ Storage::url($trendingArticle->thumbnail) }}" class="w-full h-full object-cover" alt="trending">
@@ -164,9 +178,9 @@
                         <h2 class="font-bold text-2xl md:text-[26px] leading-tight md:leading-[39px] text-gray-900">
                             Latest Hot News
                         </h2>
-                        {{-- Badge Oranye saya kembalikan, karena ini aksen yang bagus --}}
+                        
                         <p
-                            class="badge-orange rounded-full p-[8px_18px] bg-[#FFECE1] font-bold text-sm leading-[21px] text-[#FF6B18] w-fit shrink-0">
+                            class="badge-orange rounded-full p-[8px_18px] bg-[#68a63e] font-bold text-sm leading-[21px] text-[#EEF0F7] w-fit shrink-0">
                             UP TO DATE</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
@@ -217,23 +231,26 @@
                     </div>
                 </section>
 
-                <x-category-showcase 
-                    title="Latest For You <br /> in Entertainment"
-                    categorySlug="entertainment" 
+                <x-category-grid 
+                    title="Latest For You <br /> in Pemerintahan"
+                    categorySlug="pemerintahan" 
+                    :featuredArticle="$pemerintahan_featured_articles"
+                    :mainArticle="$pemerintahan_featured_articles"
+                    :articles="$pemerintahan_articles" />
+
+                 <x-category-grid 
+                    title="Latest For You <br /> in Pembangunan"
+                    categorySlug="pembangunan" 
                     :featuredArticle="$pembangunan_featured_articles"
+                    :mainArticle="$pembangunan_featured_articles"
                     :articles="$pembangunan_articles" />
 
-                 <x-category-showcase 
-                    title="Latest For You <br /> in Entertainment"
-                    categorySlug="entertainment" 
-                    :featuredArticle="$pembangunan_featured_articles"
-                    :articles="$pembangunan_articles" />
-
-                <x-category-showcase 
-                    title="Latest For You <br /> in Entertainment"
-                    categorySlug="entertainment" 
-                    :featuredArticle="$pembangunan_featured_articles"
-                    :articles="$pembangunan_articles" />
+                <x-category-grid
+                    title="Latest For You <br /> in Pertanian"
+                    categorySlug="pertanian" 
+                    :featuredArticle="$pertanian_featured_articles"
+                    :mainArticle="$pertanian_featured_articles"
+                    :articles="$pertanian_articles" />
             </main>
 
             <aside class="w-full lg:w-[calc(30%-25px)] flex flex-col gap-[40px]">
@@ -262,7 +279,7 @@
                 <section id="Best-authors" class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                     <div class="flex flex-col text-left gap-2 items-start mb-4">
                         <p
-                            class="badge-orange rounded-full p-[8px_18px] bg-[#a0d97b] font-bold text-sm leading-[21px] text-[#ffff0] w-fit">
+                            class="badge-orange rounded-full p-[8px_18px] bg-[#68a63e] font-bold text-sm leading-[21px] text-[#EEF0F7] w-fit">
                             BEST AUTHORS</p>
                         <h3 class="font-bold text-xl text-gray-900">
                             Top Writers
@@ -276,7 +293,6 @@
                                         class="object-cover w-full h-full" alt="avatar" />
                                 </div>
                                 <div class="flex flex-col gap-0">
-                                    {{-- Teks hover diubah ke Hijau Utama --}}
                                     <p class="font-semibold text-gray-900 group-hover:text-[#407a1b] transition-colors">
                                         {{ $author->name }}
                                     </p>
@@ -291,10 +307,45 @@
                     </div>
                 </section>
 
-                <section id="Sidebar-Ad" class="sticky top-[100px]"> 
-                    <div class="w-full h-[600px] bg-gray-100 rounded-2xl border border-gray-200 flex items-center justify-center shadow-sm">
-                        <p class="text-gray-400">Vertical Ad (300x600)</p>
-                    </div>
+                         <section id="Weather-Widget" class="sticky top-[100px]">
+                    @if ($weatherData)
+                        <div class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+                            <div class="text-center">
+                                <p class="font-semibold text-lg text-gray-800">Cuaca di {{ $weatherData['city'] }}</p>
+                                <img src="https://openweathermap.org/img/wn/{{ $weatherData['today']['weather'][0]['icon'] }}@2x.png" 
+                                     alt="{{ $weatherData['today']['weather'][0]['description'] }}" 
+                                     class="w-24 h-24 mx-auto -mt-2 -mb-2">
+                                <p class="font-bold text-5xl text-gray-900">{{ round($weatherData['today']['main']['temp']) }}°C</p>
+                                <p class="text-base text-gray-500 capitalize -mt-1">
+                                    {{ $weatherData['today']['weather'][0]['description'] }}
+                                </p>
+                            </div>
+                            <div class="border-t border-gray-100 my-4"></div>
+                            <div class="flex flex-col gap-3">
+                                <p class="font-bold text-gray-800">Prakiraan 4 Hari</p>
+                                <div class="flex flex-col gap-2">
+                                    @foreach ($weatherData['forecast'] as $day)
+                                        <div class="flex justify-between items-center text-sm">
+                                            <span class="text-gray-600 font-semibold w-20">
+                                                {{ \Carbon\Carbon::parse($day['dt_txt'])->translatedFormat('l') }}
+                                            </span>
+                                            <div class="flex items-center gap-1">
+                                                <img src="https://openweathermap.org/img/wn/{{ $day['weather'][0]['icon'] }}.png" 
+                                                     alt="{{ $day['weather'][0]['description'] }}" 
+                                                     class="w-6 h-6">
+                                                <span class="text-gray-500 capitalize w-20 hidden md:block">{{ $day['weather'][0]['description'] }}</span>
+                                            </div>
+                                            <span class="font-bold text-gray-800 text-right w-16">{{ round($day['main']['temp_max']) }}° / {{ round($day['main']['temp_min']) }}°</span>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <div class="w-full h-[600px] bg-gray-100 rounded-2xl border border-gray-200 flex items-center justify-center shadow-sm">
+                            <p class="text-gray-400 p-4 text-center">Gagal memuat data cuaca.<br>Coba lagi nanti.</p>
+                        </div>
+                    @endif
                 </section>
 
             </aside>
