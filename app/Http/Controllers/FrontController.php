@@ -142,7 +142,11 @@ class FrontController extends Controller
         ->inRandomOrder()
         ->first();
 
-        return view('front.category', compact('category', 'categories', 'bannerads'));
+        $articles = $category->news() // 'news()' adalah nama relasi di Model Category Anda
+                            ->latest()
+                            ->paginate(6);
+
+        return view('front.category', compact('articles', 'category', 'categories', 'bannerads'));
     }
 
     public function author(Author $author){
