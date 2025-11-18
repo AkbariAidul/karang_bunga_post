@@ -20,6 +20,8 @@
 
     @yield('content')
 
+    <x-footer />
+
     @stack('before-scripts')
 
     @stack('after-scripts')
