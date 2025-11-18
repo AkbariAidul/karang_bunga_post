@@ -6,6 +6,7 @@
         <x-navbar />
 
 	<div x-data="{ showModal: false }">
+        
 	<nav id="Category"
      class="max-w-[1130px] mx-auto flex justify-center items-center gap-4 flex-nowrap mt-4 mb-0 overflow-visible">
 
@@ -281,9 +282,9 @@
                         <p
                             class="badge-orange rounded-full p-[8px_18px] bg-[#68a63e] font-bold text-sm leading-[21px] text-[#EEF0F7] w-fit">
                             BEST AUTHORS</p>
-                        <h3 class="font-bold text-xl text-gray-900">
+                        <!-- <h3 class="font-bold text-xl text-gray-900">
                             Top Writers
-                        </h3>
+                        </h3> -->
                     </div>
                     <div class="flex flex-col divide-y divide-gray-100">
                         @forelse ($authors->take(5) as $author)
