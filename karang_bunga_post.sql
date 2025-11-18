@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 18, 2025 at 05:15 PM
+-- Generation Time: Nov 18, 2025 at 06:05 PM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.16
 
@@ -129,10 +129,10 @@ CREATE TABLE `banner_advertisments` (
 --
 
 INSERT INTO `banner_advertisments` (`id`, `link`, `type`, `thumbnail`, `is_active`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'http://myumkm.id', 'square', '01K9SXRJ10T5FS45DP1XYF677C.png', 'active', NULL, '2024-12-30 18:03:15', '2025-11-11 09:00:07'),
-(2, 'http://myumkm.id', 'square', '01K9SXS4D49BWFS186A4HF4JHR.png', 'active', NULL, '2024-12-30 18:04:01', '2025-11-11 09:00:26'),
-(3, 'http://myumkm.id', 'banner', '01K9SXSQSJGRKPCX1M155ZVNH6.png', 'active', NULL, '2024-12-30 18:04:14', '2025-11-11 09:00:46'),
-(4, 'http://myumkm.id', 'banner', '01K9SXTAQ73PQEW8JD2DSXBQ20.png', 'active', NULL, '2024-12-30 18:04:27', '2025-11-11 09:01:05');
+(1, 'https://github.com/AkbariAidul/karang_bunga_post', 'square', '01K9SXRJ10T5FS45DP1XYF677C.png', 'active', NULL, '2024-12-30 18:03:15', '2025-11-18 10:03:05'),
+(2, 'https://github.com/AkbariAidul/karang_bunga_post', 'square', '01K9SXS4D49BWFS186A4HF4JHR.png', 'active', NULL, '2024-12-30 18:04:01', '2025-11-18 10:03:35'),
+(3, 'https://github.com/AkbariAidul/karang_bunga_post', 'banner', '01K9SXSQSJGRKPCX1M155ZVNH6.png', 'active', NULL, '2024-12-30 18:04:14', '2025-11-18 10:03:44'),
+(4, 'https://github.com/AkbariAidul/karang_bunga_post', 'banner', '01K9SXTAQ73PQEW8JD2DSXBQ20.png', 'active', NULL, '2024-12-30 18:04:27', '2025-11-18 10:03:50');
 
 -- --------------------------------------------------------
 
@@ -151,8 +151,8 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1763475022),
-('a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1763475022;', 1763475022),
+('a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1763488789),
+('a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1763488789;', 1763488789),
 ('da4b9237bacccdf19c0760cab7aec4a8359010b0', 'i:1;', 1762954621),
 ('da4b9237bacccdf19c0760cab7aec4a8359010b0:timer', 'i:1762954621;', 1762954621),
 ('weather_karang_bunga', 'a:3:{s:4:\"city\";s:7:\"Serapat\";s:5:\"today\";a:10:{s:2:\"dt\";i:1763488800;s:4:\"main\";a:9:{s:4:\"temp\";d:23.82;s:10:\"feels_like\";d:24.76;s:8:\"temp_min\";d:23.41;s:8:\"temp_max\";d:23.82;s:8:\"pressure\";i:1009;s:9:\"sea_level\";i:1009;s:10:\"grnd_level\";i:1007;s:8:\"humidity\";i:96;s:7:\"temp_kf\";d:0.41;}s:7:\"weather\";a:1:{i:0;a:4:{s:2:\"id\";i:500;s:4:\"main\";s:4:\"Rain\";s:11:\"description\";s:19:\"hujan rintik-rintik\";s:4:\"icon\";s:3:\"10n\";}}s:6:\"clouds\";a:1:{s:3:\"all\";i:100;}s:4:\"wind\";a:3:{s:5:\"speed\";d:0.49;s:3:\"deg\";i:267;s:4:\"gust\";d:0.56;}s:10:\"visibility\";i:10000;s:3:\"pop\";i:1;s:4:\"rain\";a:1:{s:2:\"3h\";d:1.79;}s:3:\"sys\";a:1:{s:3:\"pod\";s:1:\"n\";}s:6:\"dt_txt\";s:19:\"2025-11-18 18:00:00\";}s:8:\"forecast\";a:4:{i:0;a:10:{s:2:\"dt\";i:1763553600;s:4:\"main\";a:9:{s:4:\"temp\";d:24.82;s:10:\"feels_like\";d:25.81;s:8:\"temp_min\";d:24.82;s:8:\"temp_max\";d:24.82;s:8:\"pressure\";i:1009;s:9:\"sea_level\";i:1009;s:10:\"grnd_level\";i:1008;s:8:\"humidity\";i:94;s:7:\"temp_kf\";i:0;}s:7:\"weather\";a:1:{i:0;a:4:{s:2:\"id\";i:500;s:4:\"main\";s:4:\"Rain\";s:11:\"description\";s:19:\"hujan rintik-rintik\";s:4:\"icon\";s:3:\"10n\";}}s:6:\"clouds\";a:1:{s:3:\"all\";i:89;}s:4:\"wind\";a:3:{s:5:\"speed\";d:0.67;s:3:\"deg\";i:116;s:4:\"gust\";d:0.52;}s:10:\"visibility\";i:10000;s:3:\"pop\";i:1;s:4:\"rain\";a:1:{s:2:\"3h\";d:0.33;}s:3:\"sys\";a:1:{s:3:\"pod\";s:1:\"n\";}s:6:\"dt_txt\";s:19:\"2025-11-19 12:00:00\";}i:1;a:9:{s:2:\"dt\";i:1763640000;s:4:\"main\";a:9:{s:4:\"temp\";d:24.46;s:10:\"feels_like\";d:25.42;s:8:\"temp_min\";d:24.46;s:8:\"temp_max\";d:24.46;s:8:\"pressure\";i:1010;s:9:\"sea_level\";i:1010;s:10:\"grnd_level\";i:1009;s:8:\"humidity\";i:94;s:7:\"temp_kf\";i:0;}s:7:\"weather\";a:1:{i:0;a:4:{s:2:\"id\";i:804;s:4:\"main\";s:6:\"Clouds\";s:11:\"description\";s:12:\"awan mendung\";s:4:\"icon\";s:3:\"04n\";}}s:6:\"clouds\";a:1:{s:3:\"all\";i:100;}s:4:\"wind\";a:3:{s:5:\"speed\";d:0.89;s:3:\"deg\";i:209;s:4:\"gust\";d:0.75;}s:10:\"visibility\";i:10000;s:3:\"pop\";i:0;s:3:\"sys\";a:1:{s:3:\"pod\";s:1:\"n\";}s:6:\"dt_txt\";s:19:\"2025-11-20 12:00:00\";}i:2;a:10:{s:2:\"dt\";i:1763726400;s:4:\"main\";a:9:{s:4:\"temp\";d:24.29;s:10:\"feels_like\";d:25.26;s:8:\"temp_min\";d:24.29;s:8:\"temp_max\";d:24.29;s:8:\"pressure\";i:1009;s:9:\"sea_level\";i:1009;s:10:\"grnd_level\";i:1009;s:8:\"humidity\";i:95;s:7:\"temp_kf\";i:0;}s:7:\"weather\";a:1:{i:0;a:4:{s:2:\"id\";i:501;s:4:\"main\";s:4:\"Rain\";s:11:\"description\";s:12:\"hujan sedang\";s:4:\"icon\";s:3:\"10n\";}}s:6:\"clouds\";a:1:{s:3:\"all\";i:92;}s:4:\"wind\";a:3:{s:5:\"speed\";d:1.45;s:3:\"deg\";i:291;s:4:\"gust\";d:3.7;}s:10:\"visibility\";i:3843;s:3:\"pop\";i:1;s:4:\"rain\";a:1:{s:2:\"3h\";d:6.23;}s:3:\"sys\";a:1:{s:3:\"pod\";s:1:\"n\";}s:6:\"dt_txt\";s:19:\"2025-11-21 12:00:00\";}i:3;a:10:{s:2:\"dt\";i:1763812800;s:4:\"main\";a:9:{s:4:\"temp\";d:23.95;s:10:\"feels_like\";d:24.93;s:8:\"temp_min\";d:23.95;s:8:\"temp_max\";d:23.95;s:8:\"pressure\";i:1009;s:9:\"sea_level\";i:1009;s:10:\"grnd_level\";i:1009;s:8:\"humidity\";i:97;s:7:\"temp_kf\";i:0;}s:7:\"weather\";a:1:{i:0;a:4:{s:2:\"id\";i:500;s:4:\"main\";s:4:\"Rain\";s:11:\"description\";s:19:\"hujan rintik-rintik\";s:4:\"icon\";s:3:\"10n\";}}s:6:\"clouds\";a:1:{s:3:\"all\";i:100;}s:4:\"wind\";a:3:{s:5:\"speed\";d:1.06;s:3:\"deg\";i:323;s:4:\"gust\";d:2.8;}s:10:\"visibility\";i:10000;s:3:\"pop\";i:1;s:4:\"rain\";a:1:{s:2:\"3h\";d:0.71;}s:3:\"sys\";a:1:{s:3:\"pod\";s:1:\"n\";}s:6:\"dt_txt\";s:19:\"2025-11-22 12:00:00\";}}}', 1763487078);
@@ -311,11 +311,10 @@ CREATE TABLE `sessions` (
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
 ('bgUTOkh4r06L01sTPlPjJf0VERThLFyihNvoXfUs', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNjluMUNSOTFFSEUwVVV5MlNtR0NOVDVtNXIzcmJqb3FRQ2ptanZ5UCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTMyOiJodHRwOi8va2FyYW5nX2J1bmdhX3Bvc3QudGVzdC9kZXRhaWxzL3NpbmVyZ2ktdGlnYS1waWxhci1wZW1kZXMtYmFiaW5zYS1kYW4tYmhhYmlua2FtdGlibWFzLWdpYXRrYW4ta2VtYmFsaS1zaXNrYW1saW5nLWRpLXNlbHVydWgtcnQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1763485242),
-('DyCwQUf522KY37pxoEHnPgeTniQDmBrIYUURYdT4', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiaTVjT3hzbWVncmU0Nlo5bEwyWGNBZW9rb2tVTHMxZXdram9rWkFobiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9rYXJhbmdfYnVuZ2FfcG9zdC50ZXN0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQwVkoyUTVUL0loLkNwWUljTEZGbzllaEZZeUI4NEQ5bi82Y2dIQ1MuVWRhSDJPTDBja2daMiI7czo2OiJ0YWJsZXMiO2E6MTp7czoyNDoiTGlzdEFydGljbGVOZXdzX3Blcl9wYWdlIjtzOjM6ImFsbCI7fX0=', 1763485976),
 ('Ewhrd9yFQUOJ62MQ2T2A4dTkqfW5C1ZVY3hBO78U', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOVVNNVNUeThKMUlCYjhLQmdvSnFLVW11UnIxUGVQOXNrN1ZTUWR1ViI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTU6Imh0dHA6Ly9rYXJhbmdfYnVuZ2FfcG9zdC50ZXN0L2NhdGVnb3J5L3BlcnRhbmlhbj9wYWdlPTEiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1763484333),
 ('mt0Cw9Vfjq5eWRBsKNQszBAXt8DgUx8quXCAxyTt', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZjRGVlRNa3JBNDdLS2t4SGc0TERzWWxtYWdFV1p6QkUzVlpoWURtdSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTg6Imh0dHA6Ly9rYXJhbmdfYnVuZ2FfcG9zdC50ZXN0L2NhdGVnb3J5L3BlbWVyaW50YWhhbj9wYWdlPTEiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1763482819),
-('sRmCTwsGJfuXVRbw8bGXE6zpSHId412OxZQ9dXal', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiQ0NKQ0ljTDBVZ0VYRkZiemtxQkNIUmRmcEJyeFhpZFBGMnhPT1pHSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQwVkoyUTVUL0loLkNwWUljTEZGbzllaEZZeUI4NEQ5bi82Y2dIQ1MuVWRhSDJPTDBja2daMiI7fQ==', 1763473100),
-('xxtvMkvOn3aBS1rdEGdx6V9spQMFf4oBN7ndsI3M', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidUxjYnVtaDd1STNFMFZBSXJ4UTBFdWZBUVVqdUo4OWxDVHNjdzdZYyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9rYXJhbmdfYnVuZ2FfcG9zdC50ZXN0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1763476240);
+('vyNJwtUbHpKya6QYoaLvwEdfFoTgYFC7EyTFyYPe', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRldvZUREalIzMjFRM21ITVNTOGVtQ3k2Tkh5SVkxdE9DUnlCdk5yMiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly9rYXJhbmdfYnVuZ2FfcG9zdC50ZXN0L2FkbWluIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEyJDBWSjJRNVQvSWguQ3BZSWNMRkZvOWVoRll5Qjg0RDluLzZjZ0hDUy5VZGFIMk9MMGNrZ1oyIjt9', 1763488669),
+('xp9Q8aQqpCR07yuGLTLvo0CCzy4MjGqQoyiqTIDz', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiS29ZNXVBRWsxcGo2eHE3N29LWm93ajFBdEFpcWpZMjRqOTZvenU3UiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjYzOiJodHRwOi8va2FyYW5nX2J1bmdhX3Bvc3QudGVzdC9hZG1pbi9iYW5uZXItYWR2ZXJ0aXNtZW50cy9jcmVhdGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTIkMFZKMlE1VC9JaC5DcFlJY0xGRm85ZWhGWXlCODREOW4vNmNnSENTLlVkYUgyT0wwY2tnWjIiO3M6ODoiZmlsYW1lbnQiO2E6MDp7fX0=', 1763489088);
 
 -- --------------------------------------------------------
 
@@ -339,7 +338,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'Karang Bunga Post', 'adminkarangbungapost@gmail.com', NULL, '$2y$12$0VJ2Q5T/Ih.CpYIcLFFo9ehFYyB84D9n/6cgHCS.UdaH2OL0ckgZ2', 'xuH1aW6Zun881pwWwwZvvPzrenOqIs9FF9J31fciGMquBAYgqIkRlfGVpF0k', '2025-11-11 08:19:46', '2025-11-11 08:19:46');
+(2, 'Karang Bunga Post', 'adminkarangbungapost@gmail.com', NULL, '$2y$12$0VJ2Q5T/Ih.CpYIcLFFo9ehFYyB84D9n/6cgHCS.UdaH2OL0ckgZ2', 'XX1Unc4hmYK50vwQpHHuv0qOeojfDALzg54DblTGqHMEaRYsTaSUTWWXs18r', '2025-11-11 08:19:46', '2025-11-11 08:19:46');
 
 --
 -- Indexes for dumped tables
